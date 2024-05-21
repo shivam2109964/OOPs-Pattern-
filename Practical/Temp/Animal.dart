@@ -31,7 +31,7 @@ class Cat extends Animal {
     String age,
     String weight,
     String color,
-  ) : super(
+    ) : super(
           name,
           gender,
           age,
