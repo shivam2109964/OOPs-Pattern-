@@ -5,18 +5,7 @@ class Person {
   //Generative Constructor
   Person(this.name, this.age);
 
-  //Named Constructor
-  Person.withName(
-    this.name,
-  ) : age = 10;
-
-  //Another named Constructor
-  Person.withAge(this.age, this.name);
-
-  Person.withFullDetail() {
-    name = "Surya";
-    age = 20;
-  }
+  Person.anonymous(String name) : this(name, 22);
 
   void display() {
     print("Name: $name, Age: $age");
@@ -24,18 +13,10 @@ class Person {
 }
 
 void main() {
-  final person = Person("Shivam", 22);
+  final person = Person("Shivam", 20);
   person.display();
-
   print("");
-  final personNamed = Person.withName("Krishna");
-  personNamed.display();
 
-  print("");
-  final personAge = Person.withAge(32, "Golu");
-  personAge.display();
-
-  print("");
-  final personFullDetails = Person.withFullDetail();
-  personFullDetails.display();
+  final person2 = Person.anonymous("Golu");
+  person2.display(); 
 }
