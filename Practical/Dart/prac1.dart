@@ -13,9 +13,7 @@ class Person {
 }
 
 class Student extends Person {
-  String givenName;
-  String surname;
-  Student(this.givenName, this.surname) : super(givenName, surname);
+  Student(String givenName, String surname) : super(givenName, surname);
   var grade = <Grade>[];
 
   String get yourGrade => grade.first.toString();
